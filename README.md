@@ -11,7 +11,7 @@ Network pruning reduces the number of parameters and computational costs of conv
 
 ## Methods<a id='Methods'></a>
 ### Pruning process with reconstruction
-![Figure 1](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_1_Pruning%20process.png)
+![Figure 1](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_1_Pruning%20process.png){: width="400" height="300"}
 
 ### Residual Block
 ![Figure 2](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_2_Residual%20Block.png)
