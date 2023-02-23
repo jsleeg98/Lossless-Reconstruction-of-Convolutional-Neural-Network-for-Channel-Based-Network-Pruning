@@ -11,15 +11,15 @@ Network pruning reduces the number of parameters and computational costs of conv
 
 ## Methods<a id='Methods'></a>
 ### Pruning process with reconstruction
-![Figure 1](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_1_Pruning%20process.png){: width="400" height="300"}
+<img src = "https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_1_Pruning%20process.png" width="900" height="500">
 
 ### Residual Block
-![Figure 2](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_2_Residual%20Block.png)
+<img src = "https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_2_Residual%20Block.png" width="900" height="500">
 
 ### Skip Connection
-![Figure 3](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_3_Skip%20Connection.png)
+<img src = "https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_3_Skip%20Connection.png" width="900" height="500">
 
 ### Batch Normalization
-![Figure 4](https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_4_Batch%20Normalization.png)
+<img src = "https://github.com/jsleeg98/Lossless-Reconstruction-of-Convolutional-Neural-Network-for-Channel-Based-Network-Pruning/blob/main/Figures/Figure_4_Batch%20Normalization.png" width="900" height="700">
 
 ## Experiments<a id='Experiments'></a>
