@@ -156,7 +156,7 @@ for epoch in range(100):  # loop over the dataset multiple times
     writer.add_scalar("Acc/test", acc, epoch)
 
     if best_acc < acc:
-        torch.save(model.module.state_dict(), f'./{args.result_dir}/{args.tb}.pth')
+        torch.save(model.module.state_dict(), f'./{args.result_dir}/{args.tb}/{args.tb}_best.pth')
         best_acc = acc
         print('save model')
     writer.flush()
