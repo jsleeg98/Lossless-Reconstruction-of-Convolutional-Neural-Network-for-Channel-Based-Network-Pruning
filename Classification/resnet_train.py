@@ -7,10 +7,24 @@ from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 import argparse
 import os
+import random
+import numpy as np
 
-
+# reproduce
+def reproduce(seed):
+    seed = seed
+    deterministic = True
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    if deterministic:
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
 
 parser = argparse.ArgumentParser()
+parser.add_argument('-seed', type=int, default=777)
 parser.add_argument('-m', '--model', type=str, default='resnet50')
 parser.add_argument('-tb', type=str, default='test')
 parser.add_argument('-g', '--gpu', type=str, default='cuda:0')
