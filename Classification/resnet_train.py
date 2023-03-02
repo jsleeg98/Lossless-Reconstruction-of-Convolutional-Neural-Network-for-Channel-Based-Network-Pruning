@@ -85,32 +85,28 @@ testloader = torch.utils.data.DataLoader(testset,
                                          )
 
 if args.model == 'resnet18':
-    # model = torchvision.models.resnet18(weights=torchvision.models.ResNet18_Weights)
-    model = torchvision.models.resnet18(pretrained=False)
+    model = torchvision.models.resnet18(weights=torchvision.models.ResNet18_Weights.IMAGENET1K_V1)
     conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     model.conv1 = conv1
-    model.fc.out_features = 10
+    model.fc = nn.Linear(512, 10)  # CIFAR10
     model = nn.DataParallel(model)
 elif args.model == 'resnet34':
-    model = torchvision.models.resnet34(weights=torchvision.models.ResNet34_Weights)
-    # model = torchvision.models.resnet34(pretrained=False)
+    model = torchvision.models.resnet34(weights=torchvision.models.ResNet34_Weights.IMAGENET1K_V1)
     conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     model.conv1 = conv1
-    model.fc.out_features = 10
+    model.fc = nn.Linear(512, 10)  # CIFAR10
     model = nn.DataParallel(model)
 elif args.model == 'resnet50':
-    model = torchvision.models.resnet50(weights=torchvision.models.ResNet50_Weights)
-    # model = torchvision.models.resnet50(pretrained=False)
+    model = torchvision.models.resnet50(weights=torchvision.models.ResNet50_Weights.IMAGENET1K_V2)
     conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     model.conv1 = conv1
-    model.fc.out_features = 10
+    model.fc = nn.Linear(2048, 10)  # CIFAR10
     model = nn.DataParallel(model)
 elif args.model == 'resnet101':
-    model = torchvision.models.resnet101(weights=torchvision.models.ResNet101_Weights)
-    # model = torchvision.models.resnet101(pretrained=False)
+    model = torchvision.models.resnet101(weights=torchvision.models.ResNet101_Weights.IMAGENET1K_V2)
     conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     model.conv1 = conv1
-    model.fc.out_features = 10
+    model.fc = nn.Linear(2048, 10)  # CIFAR10
     model = nn.DataParallel(model)
 
 
