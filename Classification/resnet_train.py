@@ -36,6 +36,15 @@ parser.add_argument('-dataset_dir', type=str, default='./datasets/')
 
 args = parser.parse_args()
 
+writer = SummaryWriter(f'logs/classification/{args.tb}')
+
+for name, value in vars(args).items():
+    print(f'{name} : {value}')
+    writer.add_text(f'{name}', f'{value}')
+
+reproduce(args.seed)  # setting random seed
+
+
 # make dir for saving results
 os.makedirs(f'./logs/{args.tb}', exist_ok=True)
 os.makedirs(f'./{args.result_dir}/{args.tb}', exist_ok=True)
