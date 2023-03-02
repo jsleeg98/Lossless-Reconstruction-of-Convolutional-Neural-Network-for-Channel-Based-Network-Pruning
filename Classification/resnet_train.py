@@ -46,7 +46,6 @@ reproduce(args.seed)  # setting random seed
 
 
 # make dir for saving results
-os.makedirs(f'./logs/{args.tb}', exist_ok=True)
 os.makedirs(f'./{args.result_dir}/{args.tb}', exist_ok=True)
 os.makedirs(f'./{args.dataset_dir}', exist_ok=True)
 
