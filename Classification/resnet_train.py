@@ -32,16 +32,14 @@ parser.add_argument('-lr', type=float, default=0.1)
 parser.add_argument('-gamma', type=float, default=0.1)
 parser.add_argument('-wd', type=float, default=0.0001)
 parser.add_argument('-result_dir', type=str, default='train_result')
-parser.add_argument('-dataset_dir', type=str, default='../datasets/CIFAR10/')
+parser.add_argument('-dataset_dir', type=str, default='./datasets/')
 
 args = parser.parse_args()
 
 # make dir for saving results
 os.makedirs(f'./logs/{args.tb}', exist_ok=True)
 os.makedirs(f'./{args.result_dir}/{args.tb}', exist_ok=True)
-# os.makedirs(f'./{args.dataset_dir}')
-
-writer = SummaryWriter(f'logs/{args.tb}')
+os.makedirs(f'./{args.dataset_dir}', exist_ok=True)
 
 # train dataset
 # data augmentation
