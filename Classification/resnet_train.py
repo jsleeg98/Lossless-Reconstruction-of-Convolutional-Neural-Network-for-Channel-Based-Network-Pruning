@@ -33,7 +33,7 @@ parser.add_argument('-lr', type=float, default=0.1)
 parser.add_argument('-gamma', type=float, default=0.1)
 parser.add_argument('-wd', type=float, default=0.0001)
 parser.add_argument('-result_dir', type=str, default='train_result')
-parser.add_argument('-dataset_dir', type=str, default='./datasets/')
+parser.add_argument('-dataset_dir', type=str, default='datasets')
 
 args = parser.parse_args()
 
