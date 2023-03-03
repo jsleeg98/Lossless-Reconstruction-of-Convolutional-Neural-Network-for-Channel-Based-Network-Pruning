@@ -121,7 +121,7 @@ print(f'device : {device}')
 model.to(device)
 
 best_acc = 0
-for epoch in range(100):  # loop over the dataset multiple times
+for epoch in range(args.epoch):  # loop over the dataset multiple times
     model.train()
     running_loss = 0.0
     print(f'epoch : {epoch + 1}')
