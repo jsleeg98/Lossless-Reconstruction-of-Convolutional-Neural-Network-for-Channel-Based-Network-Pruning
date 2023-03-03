@@ -4,7 +4,7 @@
 2. ```-m```: model name (```resnet18``` or ```resnet34``` or ```resnet50``` or ```resnet101```)
 3. ```-result_dir```: where the result model is saved. Default is ```train_result```
 4. ```-dataset_dir```: where the CIFAR10 dataset is saved. Default is ```datasets```
-## result
+## Result
 result model is saved in ```./train_result/resnet50/resnet50_original_best.pth```
 
 # Prune-Finetune-Reconstuction
@@ -15,7 +15,7 @@ result model is saved in ```./train_result/resnet50/resnet50_original_best.pth``
 4. ```-c```: compression ratio. Default is ```0.5```
 5. ```-result_dir```: where the result model is saved. Default is ```train_result```
 6. ```-dataset_dir```: where the CIFAR10 dataset is saved. Default is ```datasets```
-## result
+## Result
 result model is saved in ```./train_result/resnet50/resnet50_0.5_2_fine_recon_best.pth```
 
 # Prune-Reconstruction-Finetune
@@ -26,5 +26,5 @@ result model is saved in ```./train_result/resnet50/resnet50_0.5_2_fine_recon_be
 4. ```-c```: compression ratio. Default is ```0.5```
 5. ```-result_dir```: where the result model is saved. Default is ```train_result```
 6. ```-dataset_dir```: where the CIFAR10 dataset is saved. Default is ```datasets```
-## result
+## Result
 result model is saved in ```./train_result/resnet50/resnet50_0.5_2_recon_fine_best.pth```
