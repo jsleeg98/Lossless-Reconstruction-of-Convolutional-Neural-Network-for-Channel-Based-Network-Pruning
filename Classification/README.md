@@ -4,3 +4,8 @@
 2. ```-m```: model name (```resnet18``` or ```resnet34``` or ```resnet50``` or ```resnet101```)
 3. ```-result_dir```: where the result model is saved
 4. ```-dataset_dir```: where the CIFAR10 dataset is saved
+
+# Prune-Finetune-Reconstuction
+
+
+# Prune-Reconstruction-Finetune
