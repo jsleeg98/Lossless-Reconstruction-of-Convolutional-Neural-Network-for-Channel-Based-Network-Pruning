@@ -124,12 +124,6 @@ if args.ln == 1 or args.ln == 2:
             prune.l1_unstructured(module, name='weight', amount=args.compression_ratio, importance_scores=mask)
             prune.l1_unstructured(module, name='bias', amount=args.compression_ratio, importance_scores=mask)
 
-    for name, module in model.named_modules():
-        if isinstance(module, torch.nn.Conv2d):
-            prune.remove(module, 'weight')
-        if isinstance(module, torch.nn.BatchNorm2d):
-            prune.remove(module, 'weight')
-            prune.remove(module, 'bias')
 elif args.ln == -1:
     print('FPGM')
     for name, module in model.named_modules():
@@ -199,7 +193,7 @@ for epoch in range(args.epoch):  # loop over the dataset multiple times
 print(f'best acc : {best_acc}')
 writer.add_text('best acc', str(best_acc))
 
-model.load_state_dict(torch.load(f'./{args.result_dir}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth', map_location='cpu'))
+model.load_state_dict(torch.load(f'./{args.result_dir}/{args.tb}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth', map_location='cpu'))
 
 for name, module in model.named_modules():
     if isinstance(module, torch.nn.Conv2d):
@@ -208,7 +202,7 @@ for name, module in model.named_modules():
         prune.remove(module, 'weight')
         prune.remove(module, 'bias')
 
-torch.save(model.module.state_dict(), f'./{args.result_dir}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth')
+torch.save(model.module.state_dict(), f'./{args.result_dir}/{args.tb}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth')
 
 if args.model == 'resnet18':
     model = torchvision.models.resnet18()
@@ -232,7 +226,7 @@ elif args.model == 'resnet101':
     model.fc = nn.Linear(2048, 10)  # CIFAR10
 
 
-model.load_state_dict(torch.load(f'./{args.result_dir}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth', map_location='cpu'))
+model.load_state_dict(torch.load(f'./{args.result_dir}/{args.tb}/{args.tb}_{args.compression_ratio}_{args.ln}_fine_recon_best.pth', map_location='cpu'))
 model.to(device)
 
 
