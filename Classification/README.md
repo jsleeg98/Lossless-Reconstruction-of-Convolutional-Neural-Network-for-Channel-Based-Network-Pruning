@@ -1,3 +1,6 @@
+# install requirements.txt
+```pip install -r requirements.txt```
+
 # Train original
 ```python ./Classification/resnet_train.py -tb resnet50 -m resnet50 -result_dir train_result -dataset_dir datasets```
 1. ```-tb```: name of log
