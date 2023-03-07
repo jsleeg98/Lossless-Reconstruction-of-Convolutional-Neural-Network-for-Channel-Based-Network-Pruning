@@ -1,4 +1,4 @@
-# install requirements.txt
+# Install requirements.txt
 ```pip install -r requirements.txt```
 
 # Train original
